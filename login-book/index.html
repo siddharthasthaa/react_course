@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <blockquote>
+    <h1>Login Page</h1>
+    <form action = "" onsubmit="login(event)">
+      Username:<input type="text" id = "username"><br><br>
+      Password:<input type="password" id = "password"><br><br>
+      <button>Login</button>
+    </form>
+  </blockquote>
+  <script>
+    let username = localStorage.getItem('username');
+    if(username){
+      window.location.href = 'main.html';
+    }
+    function login(event){
+      event.preventDefault();
+      let username = document.getElementById('username').value;
+      let password = document.getElementById('password').value;
+      if(username === 'admin' && password === 'admin'){
+        localStorage.setItem('username',username);
+        window.location.href = 'main.html';
+      }
+      else{
+        alert('Login Failed');
+      }
+    }
+  </script>
+</body>
+</html>

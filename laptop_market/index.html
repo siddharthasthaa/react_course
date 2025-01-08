@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Bazar</title>
+</head>
+<body>
+    <blockquote>
+        <h1>Computer Bazar</h1>
+        <hr>
+        <h3>Product Details</h3>
+        <label for="dell">Dell: (Rs:20000)</label>
+        <input type="text" placeholder="Enter Quantity" id="dell">
+        <label for="hp">HP: (Rs:25000)</label>
+        <input type="text" placeholder="Enter Quantity" id="hp">
+        <label for="lenovo">Lenovo: (Rs:30000)</label>
+        <input type="text" placeholder="Enter Quantity" id="lenovo">
+        
+        <h3>Delivery Location</h3>
+        <input type="radio" name="delivery" id="home"> 
+        <label for="home">Home (Rs:10000)</label> 
+        <br>
+        <input type="radio" name="delivery" id="pickup" checked> 
+        <label for="pickup">Pickup (Free)</label> 
+        
+        <h3>Packing</h3>
+        <input type="checkbox" id="plastic"> 
+        <label for="plastic">Plastic (Rs:1000)</label>
+        <br>
+        <input type="checkbox" id="bag"> 
+        <label for="bag">Bag (Rs:2000)</label>
+        <br>
+        <input type="checkbox" id="giftbox"> 
+        <label for="giftbox">Gift Box (Rs:5000)</label>
+        
+        <h3>Location</h3>
+        <select name="" id="location">
+            <option value="">Select</option>
+            <option value="ktm">KTM(Rs:13% tax)</option>
+            <option value="ltp">LTP(Free)</option>
+            <option value="bkt">BKT(Free)</option>
+        </select>
+        
+        <button onclick="calculateBill()">Add Bill</button>
+        <hr>
+        
+        <div id="summary">
+            <h1>Summary</h1>
+            <h1>Name: <span id="product-name"></span></h1>
+            <h1>Price: Rs: <span id="product-price"></span></h1>
+            <h1>Quantity: <span id="product-quantity"></span></h1>
+            <h1>Tax Amount: Rs: <span id="tax-amount"></span></h1>
+            <h1>Grand Total: Rs: <span id="grand-total"></span></h1>
+        </div>
+    </blockquote>
+
+    <script src="./js/custom.js"></script>
+</body>
+</html>

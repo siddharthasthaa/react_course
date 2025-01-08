@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <blockquote>
+    <h1>JavaScript</h1>
+    <p>JavaScript is a programming language that allows developers to add interactivity and logic to web pages</p>
+  </blockquote>
+
+  <blockquote>
+    <h1>Python</h1>
+    <p>Python is a high-level, object-oriented, interpreted programming language that is used to create a variety of programs</p>
+  </blockquote>
+
+  <blockquote>
+    <h1>Java</h1>
+    <p>Java is a programming language and software platform that can be used to create a variety of applications, including mobile apps, enterprise software, and big data applications</p>
+  </blockquote>
+
+  <blockquote>
+  <button onclick = "logout()">Logout</button>
+  <blockquote>
+
+  <script>
+    let username = localStorage.getItem('username');
+    document.getElementById('user_info').innerText = `Welcome ${username}`;
+    if(username=== null){
+      window.location.href = 'index.html';
+    }
+
+    function logout()
+    {
+      localStorage.clear()
+      window.location.href = 'index.html';
+    }
+  </script>
+
+</body>
+</html>
